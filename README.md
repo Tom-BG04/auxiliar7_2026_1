@@ -1,4 +1,4 @@
-# Auxiliar 7: Scalamon
+# Auxiliar 6: Scalamon
 
 Esta es un programa sencillo para simular una batalla entre criaturas, imitando el famoso juego P*kemon.
 

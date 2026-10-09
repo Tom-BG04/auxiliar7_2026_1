@@ -15,20 +15,26 @@ class FireTest extends munit.FunSuite {
   }
 
   test("A Fire attack of a Fire creature should have a bonus") {
+    assertEquals(fMov.stabMultiplier(fCreat), 1.5)
   }
 
-  test("A Fire attack of a Grass creature do not hava a bonus") {
+  test("A Fire attack of a Grass creature do not have a bonus") {
+    assertEquals(fMov.stabMultiplier(gCreat), 1.0)
   }
 
-  test("A Fire attack of a Water creature do not hava a bonus") {
+  test("A Fire attack of a Water creature do not have a bonus") {
+    assertEquals(fMov.stabMultiplier(wCreat), 1.0)
   }
 
   test("A Fire attack should be effective against Fire") {
+    assertEquals(fMov.effectivenessAgainst(fCreat), 1.0)
   }
 
   test("A Fire attack should be supereffective against Grass") {
+    assertEquals(fMov.effectivenessAgainst(gCreat), 2.0)
   }
 
   test("A Fire attack should be ineffective against Water") {
+    assertEquals(fMov.effectivenessAgainst(wCreat), 0.5)
   }
 }

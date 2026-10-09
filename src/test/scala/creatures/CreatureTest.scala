@@ -51,4 +51,9 @@ class CreatureTest extends munit.FunSuite {
     fc.damage(40)
     assertEquals(fc.maxHp, lastHp)
   }
+
+  test("A creature's attack should deal damage considering STAB and effectiveness") {
+    fc.attack(new Ember(), rl)
+    assertEquals(rl.hp, 152.0)
+  }
 }

@@ -9,4 +9,5 @@ trait Creature{
   val maxHp: Double
   def hp: Double
   def damage(amount: Double): Unit
+  def attack(movement: Movement, target: Creature): Unit
 }
